@@ -1,0 +1,107 @@
+:root{
+  /* colors */
+  --primary-white: 0, 0%, 100%;
+  --primary-black:  0, 0%, 0%;
+  --primary-dark-gray: 0, 0%, 55%;
+  --primary-very-dark-gray: 0, 0%, 41%;
+
+  /* font-weight */
+  --fw-light: 300;
+  --fw-regular: 400;
+}
+
+body{
+  font-size: 0.9375rem;
+}
+
+main{
+
+}
+
+footer{
+
+}
+
+nav{
+
+}
+
+h2{
+
+}
+
+h3{
+
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+/* blocks */
+
+.attribution { 
+  font-size: 11px; text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+/* composition */
+.flex{
+  display: flex;
+  flex-direction: var(--flex-dir, column);
+  gap: var(--flex-gap, 0rem)
+}
+
+.grid{
+  display: grid;
+  grid-auto-flow: var(--grid-flow, row);
+  gap: var(--grid-gap, 0rem)
+}
+
+/* utilities */
+.flow > * + * {
+  margin-top: var(--flow-space, 1em)
+}
+
+.wrapper{
+  /* max-width: ; */
+  padding-inline: 3rem;
+  margin-inline: auto;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-back{
+  color: hsl(var(--primary-black));
+}
+
+.text-dark{
+  color: hsl(var(--primary-very-dark-gray));
+}
+
+.text-medium{
+  color: hsl(var(--primary-dark-gray));
+}
+
+.text-white{
+  color: hsl(var(--primary-white));
+}
+
+.bg-black{
+  background-color: hsl(var(--primary-black));
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
