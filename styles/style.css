@@ -8,10 +8,16 @@
   /* font-weight */
   --fw-light: 300;
   --fw-regular: 400;
+
+  /* font family */
+  --base-font: 'Alata', sans-serif;
+  --header-font: 'Josefin Sans', sans-serif;
 }
 
 body{
   font-size: 0.9375rem;
+  font-family: var(--base-font);
+  text-align: center;
 }
 
 main{
@@ -26,8 +32,13 @@ nav{
 
 }
 
-h2{
+h1, h2, h3, .our-creations__title{
+  font-family: var(--header-font);
+  text-transform: uppercase;
+}
 
+h2{
+  font-weight: bold;
 }
 
 h3{
@@ -40,6 +51,75 @@ a{
 }
 
 /* blocks */
+.hero{
+  font-size: 1.6rem;
+}
+
+.hero h2{
+  /* font-size: 1.6rem; */
+  border: 2px solid hsl(var(--primary-white));
+}
+
+.our-creations{
+  --flow-space: 1.75em;
+}
+
+.our-creations ul{
+  --grid-gap: 1rem;
+}
+
+.our-creations__creation{
+  position: relative;
+}
+
+.our-creations__creation :is(picture, img){
+  height: 100%;
+  object-fit: cover;
+}
+
+.our-creations__title{
+  color: hsl(var(--primary-white));
+  position: absolute;
+  font-size: 1.375rem;
+  line-height: 1;
+  text-align: left;
+  position: absolute;
+  z-index: 1;
+  left: 1rem;
+  bottom: 1rem;
+  /* background-color: hsl(var(--primary-black), .2); */
+}
+
+.our-creations__title::after{
+  position: absolute;
+  inset: 0;
+}
+
+.see-all{
+  display: inline-block;
+  border: 1.5px solid hsl(var(--primary-black));
+  padding: .5em 3em;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+}
+
+.socials{
+  --flex-gap: 1rem;
+  justify-content: center;
+}
+
+.footer__logo{
+  margin-inline: auto;
+}
+
+.footer__nav{
+  --grid-gap: 1rem;
+  padding-block: 2.5rem;
+}
+
+.footer__copyright{
+  padding-block: 1rem;
+}
 
 .attribution { 
   font-size: 11px; text-align: center; 
@@ -51,7 +131,7 @@ a{
 /* composition */
 .flex{
   display: flex;
-  flex-direction: var(--flex-dir, column);
+  flex-direction: var(--flex-dir, row);
   gap: var(--flex-gap, 0rem)
 }
 
@@ -67,13 +147,25 @@ a{
 }
 
 .wrapper{
-  /* max-width: ; */
+  max-width: 75rem;
   padding-inline: 3rem;
+  padding-block: var(--wrapper-padding, 2rem);
   margin-inline: auto;
+}
+
+.image-overlay{
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background-color: var(--overlay-clr, hsl(var(--primary-black, .2)));
 }
 
 .text-center{
   text-align: center;
+}
+
+.text-left{
+  text-align: left;
 }
 
 .text-back{
