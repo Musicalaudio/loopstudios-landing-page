@@ -12,6 +12,8 @@
   /* font family */
   --base-font: 'Alata', sans-serif;
   --header-font: 'Josefin Sans', sans-serif;
+
+  --wrapper-padding-inline: 2rem; 
 }
 
 body{
@@ -21,14 +23,29 @@ body{
 }
 
 main{
+  --wrapper-padding-block: 5.5rem;
+}
 
+main > section{
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  /* border: 2px greenyellow solid; */
+}
+
+
+header{
+  color: hsl(var(--primary-white));
+  /* should use has statement for condition dependent on if child is hero then select the parent header */
+  background-image: url(../images/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
 }
 
 footer{
-
-}
-
-nav{
 
 }
 
@@ -51,13 +68,29 @@ a{
 }
 
 /* blocks */
+.header-nav{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
 .hero{
   font-size: 1.6rem;
+  /*why does this work but not margin-block: auto? */
+  padding-block: auto;
 }
 
 .hero h2{
   /* font-size: 1.6rem; */
   border: 2px solid hsl(var(--primary-white));
+  margin-inline: var(wrapper-padding-inline);
+  padding: 1rem;
+  line-height: 1;
+}
+
+.interactive-section img{
+  margin-inline: auto;
 }
 
 .our-creations{
@@ -65,11 +98,12 @@ a{
 }
 
 .our-creations ul{
-  --grid-gap: 1rem;
+  --grid-gap: 1.2rem;
 }
 
 .our-creations__creation{
   position: relative;
+  max-width: fit-content;
 }
 
 .our-creations__creation :is(picture, img){
@@ -87,12 +121,10 @@ a{
   z-index: 1;
   left: 1rem;
   bottom: 1rem;
-  /* background-color: hsl(var(--primary-black), .2); */
 }
 
-.our-creations__title::after{
-  position: absolute;
-  inset: 0;
+.our-creations__creation h3{
+  /* margin-top: auto; */
 }
 
 .see-all{
@@ -101,6 +133,8 @@ a{
   padding: .5em 3em;
   text-transform: uppercase;
   letter-spacing: .25em;
+  max-width: fit-content;
+  margin-inline: auto;
 }
 
 .socials{
@@ -148,16 +182,16 @@ a{
 
 .wrapper{
   max-width: 75rem;
-  padding-inline: 3rem;
-  padding-block: var(--wrapper-padding, 2rem);
+  padding-inline: var(--wrapper-padding-inline, 2rem);
+  padding-block: var(--wrapper-padding-block, 2rem);
   margin-inline: auto;
 }
 
 .image-overlay{
   position: absolute;
   inset: 0;
-  z-index: 5;
-  background-color: var(--overlay-clr, hsl(var(--primary-black, .2)));
+  z-index: 1;
+  background: var(--overlay-clr, linear-gradient(to right, hsl(var(--primary-black), .5),  hsl(var(--primary-black), 0)));
 }
 
 .text-center{
