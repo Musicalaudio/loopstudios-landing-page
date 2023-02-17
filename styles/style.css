@@ -28,9 +28,9 @@ main{
 
 main > section{
   min-height: 100vh;
+  min-height: 100svh;
   display: grid;
-  place-content: center;
-  /* border: 2px greenyellow solid; */
+  align-content: center;
 }
 
 
@@ -41,12 +41,10 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  display: grid;
-  align-content: center;
+  min-height: 100svh;
 }
 
 footer{
-
 }
 
 h1, h2, h3, .our-creations__title{
@@ -69,24 +67,30 @@ a{
 
 /* blocks */
 .header-nav{
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav [role="list"]{
+  --flex-gap: 1rem;
 }
 
 .hero{
+  margin-block: auto;
   font-size: 1.6rem;
+  /* font-size: 2.65rem; */
   /*why does this work but not margin-block: auto? */
   padding-block: auto;
+  text-align: left;
 }
 
 .hero h2{
   /* font-size: 1.6rem; */
   border: 2px solid hsl(var(--primary-white));
   margin-inline: var(wrapper-padding-inline);
-  padding: 1rem;
+  padding: .5em;
   line-height: 1;
+  max-width: min-content;
 }
 
 .interactive-section img{
@@ -137,6 +141,11 @@ a{
   margin-inline: auto;
 }
 
+.see-all:hover{
+  color: hsl(var(--primary-white));
+  background-color: hsl(var(--primary-black));
+}
+
 .socials{
   --flex-gap: 1rem;
   justify-content: center;
@@ -162,10 +171,98 @@ a{
   color: hsl(228, 45%, 44%); 
 }
 
+/* global and block media query */
+@media (min-width: 700px){
+  /* global */
+  :root{
+    --wrapper-padding-inline: 6rem;
+  }
+
+  body{
+    text-align: left;
+  }
+
+  h2{
+    font-size: 2.25rem;
+  }
+
+  /* blocks */
+  .header-nav [role="list"] li{
+    margin-top: .5rem;
+  }
+
+  :is(.header-nav, footer) [role="list"] li:after{
+    content: "";
+    display: block;
+    width: 1.5em;
+    height: .1rem;
+    background-color: hsl(var(--primary-white));
+    margin-top: .5rem;
+    margin-inline: auto;
+    transform: scaleX(0);
+    transition: transform 200ms ease-in-out;
+  }
+
+  :is(.header-nav, footer) [role="list"] li:hover:after{
+    transform: scaleX(1);
+  }
+
+  .hero{
+    font-size: 3.65rem;
+  }
+
+  .interactive-section img{
+    margin: revert;  
+  }
+  
+  .our-creations{
+    grid-template-areas: "title see-more"
+                         "grid grid";
+    align-items: center;
+  }
+
+  .our-creations h2{
+    grid-area: title;
+  }
+  
+
+  .our-creations .see-all{
+    grid-area: see-more;
+    margin: 0;
+    justify-self: end;
+    height: fit-content;
+   }
+  
+  .our-creations [role="list"]{
+    grid-template-columns: repeat(4, 1fr);
+    grid-area: grid;
+  }
+
+  .footer__logo{
+    margin-inline: revert;
+  }
+
+  /* footer div.wrapper{
+    position: relative;
+  }  */
+
+  .footer__nav [role="list"]{
+    --grid-flow: column;
+    --grid-gap: 2rem;
+    max-width: fit-content;
+  }
+
+  /* footer .socials{
+    position: absolute;
+    top: 0;
+    right: 0;
+  } */
+}
+
 /* composition */
 .flex{
   display: flex;
-  flex-direction: var(--flex-dir, row);
+  flex-direction: var(--flex-direction, row);
   gap: var(--flex-gap, 0rem)
 }
 
@@ -192,18 +289,6 @@ a{
   inset: 0;
   z-index: 1;
   background: var(--overlay-clr, linear-gradient(to right, hsl(var(--primary-black), .5),  hsl(var(--primary-black), 0)));
-}
-
-.text-center{
-  text-align: center;
-}
-
-.text-left{
-  text-align: left;
-}
-
-.text-back{
-  color: hsl(var(--primary-black));
 }
 
 .text-dark{

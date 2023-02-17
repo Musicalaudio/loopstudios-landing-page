@@ -22,94 +22,6 @@
     <nav class="[ header-nav ] [ flex wrapper ]">
       <img src="./images/logo.svg" alt="loopstudios icon">
       <ul role="list" class="flex">
-        <li>About</li>
-        <li>Careers</li>
-        <li>Events</li>
-        <li>Products</li>
-        <li>Support</li>
-      </ul>
-    </nav>
-    <section class="[ hero ] [ wrapper ]">
-      <h2 class="text-left">Immersive experiences that deliver</h2>
-    </section>
-  </header>
-  <main class="wrapper">
-    <h1 class="sr-only">Loopholestudios homepage</h1>
-    <section class="[ interactive-section ] [ flow ]">
-      <img src="./images/mobile/image-interactive.jpg" alt="">
-      <h2>The leader in interactive VR</h2>
-      <p class="text-dark">Founded in 2011, Loopstudios has been producing world-class virtual reality 
-      projects for some of the best companies around the globe. Our award-winning 
-      creations have transformed businesses through digital experiences that bind 
-      to their brand.</p>
-    </section>
-    <section class="[ our-creations ] [ flow ]">
-      <h1>Our creations</h1>
-      <ul role="list" class="grid">
-        <li class="our-creations__creation">      
-          <div class="image-overlay"></div>   
-          <picture>
-            <img src="./images/mobile/image-deep-earth.jpg" alt="">
-          </picture>
-          <h3 class="our-creations__title">Deep <br>earth</a></h3>
-        </li>
-        <li class="[ our-creations__creation ]">
-          <div class="image-overlay"></div>         
-          <picture>
-            <img src="./images/mobile/image-night-arcade.jpg" alt="">
-          </picture>
-          <h3 class="our-creations__title"><a href="#">Night <br>arcade</a></h3>
-        </li>
-        <li class="our-creations__creation">
-          <div class="image-overlay"></div>
-          <picture>
-            <img src="./images/mobile/image-soccer-team.jpg" alt="">
-          </picture>
-          <h3 class="our-creations__title"><a href="#">Soccer <br>team VR</a></h3>
-        </li>
-        <li class="our-creations__creation">
-          <div class="image-overlay"></div>
-          <picture>
-            <img src="./images/mobile/image-grid.jpg" alt="">
-          </picture>
-          <h3 class="our-creations__title"><a href="#">The <br>grid</a></h3>
-        </li>
-        <li class="our-creations__creation">
-          <div class="image-overlay"></div>
-          <picture>
-            <img src="./images/mobile/image-from-above.jpg" alt="">
-          </picture>
-          <h3 class="our-creations__title"><a href="#">From up<br> above VR</a></h3>
-        </li>
-        <li class="our-creations__creation">
-          <div class="image-overlay"></div>
-          <picture>
-            <img src="./images/mobile/image-pocket-borealis.jpg" alt="">
-          </picture>
-          <h3 class="our-creations__title"><a href="#">Pocket <br>borealis</a></h3>
-        </li>
-        <li class="[ our-creations__creation ]">
-          <div class="image-overlay"></div>
-          <picture>
-            <img src="./images/mobile/image-curiosity.jpg" alt="">
-          </picture>
-          <h3 class="our-creations__title"><a href="#">The <br>curiosity</a></h3>
-        </li>
-        <li class="our-creations__creation">
-          <div class="image-overlay"></div>
-          <picture>
-            <img src="./images/mobile/image-fisheye.jpg" alt="">
-          </picture>
-          <h3 class="our-creations__title"><a href="#">Make it<br> fisheye</a></h3>
-        </li>
-      </ul>
-      <a class="see-all" href="#">See all</a>
-    </section>
-  </main>
-  <footer class="[ wrapper bg-black text-white ]">
-    <img class="footer__logo" src="./images/logo.svg" alt="loopstudios logo">
-    <nav class="footer__nav">
-      <ul role="list" class="grid">
         <li><a href="#">About</a></li>
         <li><a href="#">Careers</a></li>
         <li><a href="#">Events</a></li>
@@ -117,17 +29,120 @@
         <li><a href="#">Support</a></li>
       </ul>
     </nav>
-    <ul role="list" class="[ socials ] [ flex ]">
-      <li><a href="#"><img src="./images/icon-facebook.svg" alt="facebook page link"></a></li>
-      <li><a href="#"><img src="./images/icon-twitter.svg" alt="twitter page link"></a></li>
-      <li><a href="#"><img src="./images/icon-pinterest.svg" alt="pinterest page link"></a></li>
-      <li><a href="#"><img src="./images/icon-instagram.svg" alt="instagram page link"></a></li>
-    </ul>
-    <p class="[ footer__copyright ] [ text-dark ]">© 2021 Loopstudios. All rights reserved.</p>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/Musicalaudio/loopstudios-landing-page" target="_blank">Musicalaudio</a>.
-    </div>
+    <section class="[ hero ] [ wrapper ]">
+      <h2>Immersive experiences that deliver</h2>
+    </section>
+  </header>
+  <main class="wrapper">
+    <h1 class="sr-only">Loopholestudios homepage</h1>
+    <section class="[ interactive-section ] [ flow ]">
+      <picture>
+        <source srcset="./images/desktop/image-interactive.jpg" media="(min-width: 700px)">
+        <img src="./images/mobile/image-interactive.jpg" alt="image of man with a VR headset">
+      </picture>
+      <div class="interactive-section__text">
+        <h2>The leader in interactive VR</h2>
+        <p class="text-dark">Founded in 2011, Loopstudios has been producing world-class virtual reality 
+        projects for some of the best companies around the globe. Our award-winning 
+        creations have transformed businesses through digital experiences that bind 
+        to their brand.</p>
+      </div>
+    </section>
+    <section class="[ our-creations ] [ flow grid ]">
+      <h2>Our creations</h2>
+      <ul role="list" class="grid">
+        <li class="our-creations__creation">      
+          <div class="image-overlay"></div>   
+          <picture>
+            <source srcset="./images/desktop/image-deep-earth.jpg" media="(min-width: 700px)">
+            <img src="./images/mobile/image-deep-earth.jpg" alt="planet earth from space">
+          </picture>
+          <h3 class="our-creations__title">Deep <br>earth</a></h3>
+        </li>
+        <li class="[ our-creations__creation ]">
+          <div class="image-overlay"></div>         
+          <picture>
+            <source srcset="./images/desktop/image-night-arcade.jpg" media="(min-width: 700px)">
+            <img src="./images/mobile/image-night-arcade.jpg" alt="pinball machine at an arcade">
+          </picture>
+          <h3 class="our-creations__title"><a href="#">Night <br>arcade</a></h3>
+        </li>
+        <li class="our-creations__creation">
+          <div class="image-overlay"></div>
+          <picture>
+            <source srcset="./images/desktop/image-soccer-team.jpg" media="(min-width: 700px)">
+            <img src="./images/mobile/image-soccer-team.jpg" alt="guy playing football">
+          </picture>
+          <h3 class="our-creations__title"><a href="#">Soccer <br>team VR</a></h3>
+        </li>
+        <li class="our-creations__creation">
+          <div class="image-overlay"></div>
+          <picture>
+            <source srcset="./images/desktop/image-grid.jpg" media="(min-width: 700px)">
+            <img src="./images/mobile/image-grid.jpg" alt="sports car">
+          </picture>
+          <h3 class="our-creations__title"><a href="#">The <br>grid</a></h3>
+        </li>
+        <li class="our-creations__creation">
+          <div class="image-overlay"></div>
+          <picture>
+            <source srcset="./images/desktop/image-from-above.jpg" media="(min-width: 700px)">
+            <img src="./images/mobile/image-from-above.jpg" alt="windy road from birds eye view">
+          </picture>
+          <h3 class="our-creations__title"><a href="#">From up<br> above VR</a></h3>
+        </li>
+        <li class="our-creations__creation">
+          <div class="image-overlay"></div>
+          <picture>
+            <source srcset="./images/desktop/image-pocket-borealis.jpg" media="(min-width: 700px)">
+            <img src="./images/mobile/image-pocket-borealis.jpg" alt="aurora borealis/northern lights">
+          </picture>
+          <h3 class="our-creations__title"><a href="#">Pocket <br>borealis</a></h3>
+        </li>
+        <li class="[ our-creations__creation ]">
+          <div class="image-overlay"></div>
+          <picture>
+            <source srcset="./images/desktop/image-curiosity.jpg" media="(min-width: 700px)">
+            <img src="./images/mobile/image-curiosity.jpg" alt="mars rover robot">
+          </picture>
+          <h3 class="our-creations__title"><a href="#">The <br>curiosity</a></h3>
+        </li>
+        <li class="our-creations__creation">
+          <div class="image-overlay"></div>
+          <picture>
+            <source srcset="./images/desktop/image-fisheye.jpg" media="(min-width: 700px)">
+            <img src="./images/mobile/image-fisheye.jpg" alt="fish eye effect on some outdoor image">
+          </picture>
+          <h3 class="our-creations__title"><a href="#">Make it<br> fisheye</a></h3>
+        </li>
+      </ul>
+      <a class="see-all" href="#">See all</a>
+    </section>
+  </main>
+  <footer class="[ bg-black text-white ]">
+    <div class="wrapper">
+      <img class="footer__logo" src="./images/logo.svg" alt="loopstudios logo">
+      <nav class="footer__nav">
+        <ul role="list" class="grid">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </nav>
+      <ul role="list" class="[ socials ] [ flex ]">
+        <li><a href="#"><img src="./images/icon-facebook.svg" alt="facebook page link"></a></li>
+        <li><a href="#"><img src="./images/icon-twitter.svg" alt="twitter page link"></a></li>
+        <li><a href="#"><img src="./images/icon-pinterest.svg" alt="pinterest page link"></a></li>
+        <li><a href="#"><img src="./images/icon-instagram.svg" alt="instagram page link"></a></li>
+      </ul>
+      <p class="[ footer__copyright ] [ text-dark ]">© 2021 Loopstudios. All rights reserved.</p>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/Musicalaudio/loopstudios-landing-page" target="_blank">Musicalaudio</a>.
+      </div>
+    </div> 
   </footer>
 </body>
 </html>
