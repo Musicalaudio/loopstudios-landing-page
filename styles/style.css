@@ -271,6 +271,7 @@ a{
   footer .socials{
     grid-area: socials;
     justify-self: end;
+    align-items: center;
   }
 
   .footer__nav [role="list"]{
