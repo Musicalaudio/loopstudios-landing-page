@@ -211,8 +211,22 @@ a{
     font-size: 3.65rem;
   }
 
+  .interactive-section{
+    position: relative;
+  }
+
   .interactive-section img{
-    margin: revert;  
+    margin: revert;
+    position: absolute;
+    inset: 0;
+  }
+
+  .interactive-section__text{
+    position: absolute;
+    padding: 4em 0 4em 4em;
+    top: 30%;
+    left: 56%;
+    background-color: hsl(var(--primary-white)); 
   }
   
   .our-creations{
@@ -224,7 +238,6 @@ a{
   .our-creations h2{
     grid-area: title;
   }
-  
 
   .our-creations .see-all{
     grid-area: see-more;
@@ -238,25 +251,43 @@ a{
     grid-area: grid;
   }
 
-  .footer__logo{
-    margin-inline: revert;
+  footer .wrapper > * {
+    padding: 0;
+    margin: 0;
   }
 
-  /* footer div.wrapper{
-    position: relative;
-  }  */
+  .footer__container{
+    grid-template-areas: "logo socials"
+                         "nav copyright"
+                        "attribution attribution";
+    --grid-gap: 2rem;
+  }
+
+  .footer__logo{
+    margin-inline: revert;
+    grid-area: logo;
+  }
+
+  footer .socials{
+    grid-area: socials;
+    justify-self: end;
+  }
 
   .footer__nav [role="list"]{
+    grid-area: nav;
     --grid-flow: column;
-    --grid-gap: 2rem;
+    --grid-gap: 1rem;
     max-width: fit-content;
   }
 
-  /* footer .socials{
-    position: absolute;
-    top: 0;
-    right: 0;
-  } */
+  .footer__copyright{
+    grid-area: copyright;
+    justify-self: end;
+  }
+
+  footer .attribution{
+    grid-area: attribution;
+  }
 }
 
 /* composition */
